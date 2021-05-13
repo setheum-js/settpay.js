@@ -1,2 +1,2 @@
-# setters.js
-A web3 PolkadotJS endpoint that provides crucial package support to Setheum.JS like Setheum Network and Substrate specific types &amp; JS packages built on the setheum-js and substrate stack.
+# settpay{.js}
+A web3 SetheumJS API endpoint that provides the crucial SettPay API package support for the SettPaySDK, built on the setheum-js stack.
