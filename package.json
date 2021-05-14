@@ -6,7 +6,6 @@
   "repository": "https://github.com/Setheum-Labs/settpay.js.git",
   "author": "Muhammad-Jibril <jbashir52@gmail.com>",
   "license": "Apache-2.0",
-  "private": false,
   "keywords": [
     "Setheum",
     "SettPay",
