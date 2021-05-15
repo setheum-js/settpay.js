@@ -90,17 +90,65 @@ export const ETHEREUM_NETWORK_LIST = Object.freeze(
   setDefault(ethereumNetworkBase, ethereumDefaultValues)
 );
 
-// Substrate --------------------------------------------------------
+// Substrate Networks --------------------------------------------------------
 //
 /* eslint-enable sort-keys */
 // genesisHash is used as Network key for Substrate networks
 export const SubstrateNetworkKeys = Object.freeze({
+  KUSAMA: "0xb0a8d493285c2df73290dfb7e61f870f17b41801197a149ca93654499ea3dafe", // https://polkascan.io/pre/kusama-cc3/block/0
+  KUSAMA_CC2:
+    "0xe3777fa922cafbff200cadeaea1a76bd7898ad5b89f7848999058b50e715f636",
+  KUSAMA_DEV:
+    "0x5e9679182f658e148f33d3f760f11179977398bb3da8d1f0bf7b267fe6b3ebb0",
+  POLKADOT:
+    "0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3",
   SUBSTRATE_DEV:
     "0x0d667fd278ec412cd9fccdb066f09ed5b4cfd9c9afa9eb747213acb02b1e70bc", // substrate --dev commit ac6a2a783f0e1f4a814cf2add40275730cd41be1 hosted on wss://dev-node.substrate.dev .
-});
+  WESTEND: "0xe143f23803ac50e8f6f8e62695d1ce9e4e1d68aa36c1cd2cfd15340213f3423e",
+  });
 
 
 const substrateNetworkBase = {
+  [SubstrateNetworkKeys.KUSAMA]: {
+    color: "#000",
+    decimals: 12,
+    genesisHash: SubstrateNetworkKeys.KUSAMA,
+    order: 2,
+    pathId: "kusama",
+    prefix: 2,
+    title: "Kusama",
+    unit: "KSM",
+  },
+  [SubstrateNetworkKeys.KUSAMA_CC2]: {
+    color: "#000",
+    decimals: 12,
+    genesisHash: SubstrateNetworkKeys.KUSAMA,
+    order: 2,
+    pathId: "kusama_CC2",
+    prefix: 2,
+    title: "Kusama",
+    unit: "KSM",
+  },
+  [SubstrateNetworkKeys.KUSAMA_DEV]: {
+    color: "#000",
+    decimals: 12,
+    genesisHash: SubstrateNetworkKeys.KUSAMA_DEV,
+    order: 99,
+    pathId: "kusama_dev",
+    prefix: 2,
+    title: "Kusama Development",
+    unit: "KSM",
+  },
+  [SubstrateNetworkKeys.POLKADOT]: {
+    color: "#E6027A",
+    decimals: 12,
+    genesisHash: null,
+    order: 1,
+    pathId: "polkadot",
+    prefix: 0,
+    title: "Polkadot",
+    unit: "DOT",
+  },
   [SubstrateNetworkKeys.SUBSTRATE_DEV]: {
     color: "#18FFB2",
     decimals: 12,
@@ -110,7 +158,17 @@ const substrateNetworkBase = {
     prefix: 42,
     title: "Substrate Development",
     unit: "UNIT",
-  }
+  },
+  [SubstrateNetworkKeys.WESTEND]: {
+    color: "#660D35",
+    decimals: 12,
+    genesisHash: SubstrateNetworkKeys.WESTEND,
+    order: 3,
+    pathId: "westend",
+    prefix: 42,
+    title: "Westend",
+    unit: "WND",
+  },
 };
 
 // Unknown Networks ----------------------------------------------------
