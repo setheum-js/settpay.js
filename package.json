@@ -1,9 +1,12 @@
 {
-  "name": "@settpay/settpay.js",
-  "version": "0.1.0",
+  "name": "@setheum.js/settpay",
+  "version": "1.0.0",
   "description": "A web3 PolkadotJS API endpoint that provides the crucial SettPay API package support for the SettPaySDK, built on the polkadot-js stack.",
   "main": "index.ts",
-  "repository": "https://github.com/Setheum-Labs/settpay.js.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/setheum-js/settpay.js.git"
+  },
   "author": "Muhammad-Jibril <jbashir52@gmail.com>",
   "license": "Apache-2.0",
   "keywords": [
@@ -50,5 +53,6 @@
     "prettier": "^1.19.1",
     "webpack": "^5.37.0",
     "webpack-cli": "^3.3.10"
-  }
+  },
+  "homepage": "https://github.com/setheum-js/settpay.js#readme"
 }
