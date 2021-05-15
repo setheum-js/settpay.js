@@ -34,6 +34,7 @@ export const UnknownNetworkKeys = Object.freeze({
 });
 
 // TODO: Separate Test Networks from Main Networks
+// TODO: Add the SettPay Network and set it as Default Network
 
 // Ethereum --------------------------------------------------------
 //
@@ -227,5 +228,6 @@ function setDefault(networkBase, defaultProps) {
   }, {});
 }
 
+// TODO: Add the SettPay Network and set it as Default Network
 // the default network
 export const defaultNetworkKey = SubstrateNetworkKeys.POLKADOT;
