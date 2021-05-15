@@ -33,6 +33,8 @@ export const UnknownNetworkKeys = Object.freeze({
   UNKNOWN: "unknown",
 });
 
+// TODO: Separate Test Networks from Main Networks
+
 // Ethereum --------------------------------------------------------
 //
 // ethereumChainId is used as Network key for Ethereum networks
