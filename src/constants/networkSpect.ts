@@ -228,4 +228,4 @@ function setDefault(networkBase, defaultProps) {
 }
 
 // the default network
-export const defaultNetworkKey = SubstrateNetworkKeys.SUBSTRATE_DEV;
+export const defaultNetworkKey = SubstrateNetworkKeys.POLKADOT;
