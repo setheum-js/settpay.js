@@ -20,18 +20,37 @@ const colors = {
   },
 };
 
-export const unknownNetworkPathId = "";
-
 export const NetworkProtocols = Object.freeze({
   ETHEREUM: "ethereum",
   SUBSTRATE: "substrate",
   UNKNOWN: "unknown",
 });
 
+// Unknown Networks ----------------------------------------------------
+//
+/* eslint-enable sort-keys */
+//
 // accounts for which the network couldn't be found (failed migration, removed network)
 export const UnknownNetworkKeys = Object.freeze({
   UNKNOWN: "unknown",
 });
+
+export const unknownNetworkPathId = "";
+
+const unknownNetworkBase = {
+  [UnknownNetworkKeys.UNKNOWN]: {
+    color: colors.signal.error,
+    order: 99,
+    pathId: unknownNetworkPathId,
+    prefix: 2,
+    protocol: NetworkProtocols.UNKNOWN,
+    secondaryColor: colors.background.card,
+    title: "Unknown network",
+  },
+};
+
+export const UNKNOWN_NETWORK = Object.freeze(unknownNetworkBase);
+
 
 // TODO: Separate Test Networks from Main Networks
 // TODO: Add the SettPay Network and set it as Default Network
@@ -49,7 +68,7 @@ export const SubstrateNetworkKeys = Object.freeze({
 
 const substrateNetworkBase = {
   [SubstrateNetworkKeys.KUSAMA]: {
-    color: "#000",
+    color: "#45008a", // a shade of "purple"
     decimals: 12,
     genesisHash: SubstrateNetworkKeys.KUSAMA,
     order: 2,
@@ -59,7 +78,7 @@ const substrateNetworkBase = {
     unit: "KSM",
   },
   [SubstrateNetworkKeys.POLKADOT]: {
-    color: "#E6027A",
+    color: "#E6027A", // a shade of "pink"
     decimals: 12,
     genesisHash: null,
     order: 1,
@@ -70,22 +89,8 @@ const substrateNetworkBase = {
   },
 };
 
-// Unknown Networks ----------------------------------------------------
-//
-const unknownNetworkBase = {
-  [UnknownNetworkKeys.UNKNOWN]: {
-    color: colors.signal.error,
-    order: 99,
-    pathId: unknownNetworkPathId,
-    prefix: 2,
-    protocol: NetworkProtocols.UNKNOWN,
-    secondaryColor: colors.background.card,
-    title: "Unknown network",
-  },
-};
-
 const substrateDefaultValues = {
-  color: "#4C4646",
+  color: "#001369", // dark shade of "navy blue"
   protocol: NetworkProtocols.SUBSTRATE,
   secondaryColor: colors.background.card,
 };
@@ -93,12 +98,12 @@ const substrateDefaultValues = {
 export const SUBSTRATE_NETWORK_LIST = Object.freeze(
   setDefault(substrateNetworkBase, substrateDefaultValues)
 );
-export const UNKNOWN_NETWORK = Object.freeze(unknownNetworkBase);
 
 const substrateNetworkMetas = Object.values({
   ...SUBSTRATE_NETWORK_LIST,
   ...UNKNOWN_NETWORK,
 });
+
 export const PATH_IDS_LIST = substrateNetworkMetas.map(
   (meta: any) => meta.pathId
 );
