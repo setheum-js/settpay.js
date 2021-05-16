@@ -1,7 +1,7 @@
 {
   "name": "@setheum.js/settpay",
-  "version": "2.0.1",
-  "description": "A web3 PolkadotJS API endpoint that provides the crucial SettPay API package support for the SettPaySDK, built on the polkadot-js stack.",
+  "version": "2.0.2",
+  "description": "A web3 PolkadotJS API wrap that provides SettPay API package for the SettPaySDK.",
   "main": "index.ts",
   "repository": {
     "type": "git",
