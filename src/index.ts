@@ -7,23 +7,14 @@ import staking from "./service/staking";
 import gov from "./service/gov";
 import { genLinks } from "./utils/config/config";
 
-// create the channel
-const SettPay = new BroadcastChannel("SettPay");
-
-// handle incoming channel messages: SettPay
-SettPay.addEventListener("message", e =>{
-  console.log(e);
-},
-
-// send messages to channel: SettPay
-function send(path: string, data: any) {
-  if (window.location.href.match("https://localhost:8080/")) {
-    SettPay.postMessage(JSON.stringify({ path, data }));
-  } else {
-    console.log(path, data);
+  // send message to JSChannel: SettPay
+  function send(path: string, data: any) {
+    if (window.location.href.match("https://localhost:8080/")) {
+      SettPay.postMessage(JSON.stringify({ path, data }));
+    } else {
+      console.log(path, data);
+    }
   }
-},
-
 send("log", "main js loaded");
 (<any>window).send = send;
 
