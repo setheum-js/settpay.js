@@ -73,4 +73,7 @@ const settings = {
 (<any>window).staking = staking;
 (<any>window).gov = gov;
 
+// walletConnect support is not ready, add if ready.
+// (<any>window).walletConnect = wc;
+
 export default settings;

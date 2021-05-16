@@ -1,3 +1,6 @@
+import networks from "@polkadot/networks";
+import { assert } from "@polkadot/util";
+
 const colors = {
   background: {
     app: "#70c1ff", // a shade of "sky blue"
@@ -133,3 +136,12 @@ function setDefault(networkBase, defaultProps) {
 // TODO: Add the SettPay Network and set it as Default Network
 // the default network
 export const defaultNetworkKey = SubstrateNetworkKeys.POLKADOT;
+
+// get genesis
+function getGenesis(name: string): string {
+  const network = networks.find(({ network }) => network === name);
+  assert(network && network.genesisHash[0], `Unable to find genesisHash for ${name}`);
+  return network.genesisHash[0];
+}
+export const KUSAMA_GENESIS = getGenesis("kusama");
+export const POLKADOT_GENESIS = getGenesis("polkadot");
