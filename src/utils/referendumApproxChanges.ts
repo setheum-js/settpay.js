@@ -188,12 +188,12 @@ export function approxChanges(
     changeAye: state.votedNay.isZero()
       ? BN_ZERO
       : isPassing
-      ? BN.min(changeAye, state.votedAye)
-      : changeAye,
+        ? BN.min(changeAye, state.votedAye)
+        : changeAye,
     changeNay: state.votedAye.isZero()
       ? BN_ZERO
       : isPassing
-      ? changeNay
-      : BN.min(changeNay, state.votedNay),
+        ? changeNay
+        : BN.min(changeNay, state.votedNay),
   };
 }
