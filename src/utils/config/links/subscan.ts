@@ -1,6 +1,5 @@
 export default {
   chains: {
-    "Acala Mandala TC4": "acala-testnet",
     Kusama: "kusama",
     "Kusama CC3": "kusama",
     Polkadot: "polkadot",
