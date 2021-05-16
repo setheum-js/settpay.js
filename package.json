@@ -8,6 +8,9 @@
     "url": "git+https://github.com/setheum-js/settpay.js.git"
   },
   "author": "Muhammad-Jibril <jbashir52@gmail.com>",
+  "maintainers": [
+    "Muhammad-Jibril <jbashir52@gmail.com>"
+  ],
   "license": "Apache-2.0",
   "keywords": [
     "Setheum",
