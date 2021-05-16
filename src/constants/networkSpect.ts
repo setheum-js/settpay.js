@@ -35,6 +35,7 @@ export const UnknownNetworkKeys = Object.freeze({
 
 // TODO: Separate Test Networks from Main Networks
 // TODO: Add the SettPay Network and set it as Default Network
+// TODO: Add the Setheum Network
 
 // Substrate Networks --------------------------------------------------------
 //
