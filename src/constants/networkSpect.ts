@@ -49,9 +49,6 @@ export const SubstrateNetworkKeys = Object.freeze({
     "0x5e9679182f658e148f33d3f760f11179977398bb3da8d1f0bf7b267fe6b3ebb0",
   POLKADOT:
     "0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3",
-  SUBSTRATE_DEV:
-    "0x0d667fd278ec412cd9fccdb066f09ed5b4cfd9c9afa9eb747213acb02b1e70bc", // substrate --dev commit ac6a2a783f0e1f4a814cf2add40275730cd41be1 hosted on wss://dev-node.substrate.dev .
-  WESTEND: "0xe143f23803ac50e8f6f8e62695d1ce9e4e1d68aa36c1cd2cfd15340213f3423e",
   });
 
 
@@ -95,26 +92,6 @@ const substrateNetworkBase = {
     prefix: 0,
     title: "Polkadot",
     unit: "DOT",
-  },
-  [SubstrateNetworkKeys.SUBSTRATE_DEV]: {
-    color: "#18FFB2",
-    decimals: 12,
-    genesisHash: SubstrateNetworkKeys.SUBSTRATE_DEV,
-    order: 100,
-    pathId: "substrate_dev",
-    prefix: 42,
-    title: "Substrate Development",
-    unit: "UNIT",
-  },
-  [SubstrateNetworkKeys.WESTEND]: {
-    color: "#660D35",
-    decimals: 12,
-    genesisHash: SubstrateNetworkKeys.WESTEND,
-    order: 3,
-    pathId: "westend",
-    prefix: 42,
-    title: "Westend",
-    unit: "WND",
   },
 };
 
