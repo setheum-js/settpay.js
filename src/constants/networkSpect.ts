@@ -36,61 +36,6 @@ export const UnknownNetworkKeys = Object.freeze({
 // TODO: Separate Test Networks from Main Networks
 // TODO: Add the SettPay Network and set it as Default Network
 
-// Ethereum --------------------------------------------------------
-//
-// ethereumChainId is used as Network key for Ethereum networks
-/* eslint-disable sort-keys */
-export const EthereumNetworkKeys = Object.freeze({
-  FRONTIER: "1",
-  ROPSTEN: "3",
-  RINKEBY: "4",
-  GOERLI: "5",
-  KOVAN: "42",
-  CLASSIC: "61",
-});
-
-const ethereumNetworkBase = {
-  [EthereumNetworkKeys.FRONTIER]: {
-    color: "#8B94B3",
-    ethereumChainId: EthereumNetworkKeys.FRONTIER,
-    order: 101,
-    secondaryColor: colors.background.card,
-    title: "Ethereum",
-  },
-  [EthereumNetworkKeys.CLASSIC]: {
-    color: "#1a4d33",
-    ethereumChainId: EthereumNetworkKeys.CLASSIC,
-    order: 102,
-    secondaryColor: colors.background.card,
-    title: "Ethereum Classic",
-  },
-  [EthereumNetworkKeys.ROPSTEN]: {
-    ethereumChainId: EthereumNetworkKeys.ROPSTEN,
-    order: 104,
-    title: "Ropsten Testnet",
-  },
-  [EthereumNetworkKeys.GOERLI]: {
-    ethereumChainId: EthereumNetworkKeys.GOERLI,
-    order: 105,
-    title: "Görli Testnet",
-  },
-  [EthereumNetworkKeys.KOVAN]: {
-    ethereumChainId: EthereumNetworkKeys.KOVAN,
-    order: 103,
-    title: "Kovan Testnet",
-  },
-};
-
-const ethereumDefaultValues = {
-  color: "#434875",
-  protocol: NetworkProtocols.ETHEREUM,
-  secondaryColor: colors.background.card,
-};
-
-export const ETHEREUM_NETWORK_LIST = Object.freeze(
-  setDefault(ethereumNetworkBase, ethereumDefaultValues)
-);
-
 // Substrate Networks --------------------------------------------------------
 //
 /* eslint-enable sort-keys */
@@ -210,7 +155,6 @@ export const NETWORK_LIST = Object.freeze(
   Object.assign(
     {},
     SUBSTRATE_NETWORK_LIST,
-    ETHEREUM_NETWORK_LIST,
     UNKNOWN_NETWORK
   )
 );
