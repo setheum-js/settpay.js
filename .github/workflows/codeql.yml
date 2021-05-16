@@ -45,25 +45,3 @@ jobs:
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
-
-  publish-package:
-      runs-on: ubuntu-latest
-     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-      with:
-        # We must fetch at least the immediate parents so that if this is
-        # a pull request then we can checkout the head.
-        fetch-depth: 2
-
-      - uses: actions/setup-node@v1
-        with:
-          node-version: [12.x]
-          registry-url: https://registry.npmjs.org/
-      - name: Installing packages
-        run: npm install
-      - name: Publishing Package
-        run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
-          
