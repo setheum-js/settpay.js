@@ -17,7 +17,7 @@ SettPay.addEventListener("message", e =>{
 
 // send messages to channel: SettPay
 function send(path: string, data: any) {
-  if (window.location.href === "about:blank") {
+  if (window.location.href.match("https://localhost:8080/")) {
     SettPay.postMessage(JSON.stringify({ path, data }));
   } else {
     console.log(path, data);
@@ -28,8 +28,7 @@ send("log", "main js loaded");
 (<any>window).send = send;
 
 /**
- * connect to a specifi
-c node.
+ * connect to a specific node.
  *
  * @param {string} nodeEndpoint
  */
@@ -41,7 +40,7 @@ async function connect(nodes: string[]) {
         provider: wsProvider,
       });
       (<any>window).api = res;
-      const url = nodes[(<any>res)._options.provider.__private_15_endpointIndex];
+      const url = nodes[(<any>res)._options.provider.__private_9_endpointIndex];
       send("log", `${url} wss connected success`);
       resolve(url);
     } catch (err) {
