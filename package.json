@@ -1,6 +1,6 @@
 {
   "name": "@setheum.js/settpay",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "A web3 PolkadotJS API wrap that provides SettPay API package for the SettPaySDK.",
   "main": "index.ts",
   "homepage": "https://github.com/setheum-js/settpay.js#readme",
