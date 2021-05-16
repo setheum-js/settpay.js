@@ -77,10 +77,10 @@ async function disconnect(param: SessionTypes.DeleteParams) {
 async function approveProposal(proposal: SessionTypes.Proposal, address: string) {
   const response: SessionTypes.Response = {
     metadata: {
-      name: "Polkawallet",
-      description: "Mobile wallet for polkadot ecosystem.",
+      name: "SettPay",
+      description: "Mobile Web3 wallet for Setheum and the Web3 ecosystem.",
       url: "#",
-      icons: ["https://polkawallet.io/images/logo.png"],
+      icons: ["https://avatars.githubusercontent.com/u/84116707?s=400&u=c97ae3522d85e60f198773dc55cd685845ac71a5&v=4"],
     },
     state: {
       accounts: [address],
