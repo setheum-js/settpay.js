@@ -3,7 +3,8 @@ import { WsProvider, ApiPromise } from "@polkadot/api";
 import { subscribeMessage, getNetworkConst, getNetworkProperties } from "./service/setting";
 import keyring from "./service/keyring";
 import account from "./service/account";
-import staking from "./service/staking/index";
+import staking from "./service/staking";
+// TODO: import wc from "./service/walletconnect";
 import gov from "./service/gov";
 import { genLinks } from "./utils/config/config";
 
