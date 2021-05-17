@@ -63,3 +63,8 @@
 
 ## 3.0.2 - 2021-05-16
 - Update walletconnect
+
+
+## 3.0.3 - 2021-05-16
+- Bump polkadot-js/api to v4.10.1
+- Bump polkadot-js/ui-shared to v0.76.1

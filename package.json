@@ -1,6 +1,6 @@
 {
   "name": "@setheum.js/settpay",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "A web3 PolkadotJS API wrap that provides SettPay API package for the SettPaySDK.",
   "main": "index.ts",
   "homepage": "https://github.com/setheum-js/settpay.js#readme",
@@ -32,11 +32,11 @@
     "build-dev": "webpack -d --mode development"
   },
   "resolutions": {
-    "@polkadot/api": "^4.6.2"
+    "@polkadot/api": "^4.10.1"
   },
   "dependencies": {
-    "@polkadot/api": "^4.6.2",
-    "@polkadot/ui-shared": "0.74.1",
+    "@polkadot/api": "^4.10.1",
+    "@polkadot/ui-shared": "0.76.1",
     "@walletconnect/client": "2.0.0-alpha.26",
     "bn.js": "^5.1.2",
     "oo7-substrate": "^0.8.0",
